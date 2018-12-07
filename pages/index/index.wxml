@@ -1,0 +1,97 @@
+<!--pages/register/register.wxml-->
+<view class='top'>
+<view class='text_align'>红树林自然保护区记录报告 </view>
+</view>
+
+
+<view>
+<view class='form'>
+
+
+<view class='hint'>标☆号为必填项</view>
+  <form  bindsubmit="formSubmit" bindreset="formReset">
+  <view class='view1' ><view class='view'>品  种  ☆ </view><input value='{{form_info}}' type='text' name="type"></input></view>
+  <view class='view1' ><view class='view'>数  量  ☆ </view><input value='{{form_info}}' type='text' name="num"></input></view>
+<view class="view1">
+    <picker bindchange="bindPickerChange" value="{{index}}" range="{{array}}" name="arraying">
+        <view class="picker">
+            拍摄区域选择: {{array[index]}}
+        </view>
+    </picker>
+</view>
+
+<view class="view1">
+    <picker mode="date" value="{{date}}" start="2015-09-01" end="2017-09-01" bindchange="bindDateChange" name="dating" >
+        <view class="picker">
+            当前选择: {{date}}
+        </view>
+    </picker>
+</view>
+  <view class="view1">
+    <picker bindchange="bindMarkerChange" value="{{markerindex}}" range="{{marker}}" name="markering">
+        <view class="picker">
+            当前选择: {{marker[markerindex]}}
+        </view>
+    </picker>
+</view>
+<view class="view1">
+        <view class="section__title"   >心情感想</view>
+       
+    </view>
+    <view class="view1">
+       
+        <view ><textarea name="fun"  value='{{form_info}}' placeholder="请输入..."></textarea></view>
+    </view>
+<view class='xiahuaxian'></view>
+  <view class="view1">
+        <view class="section__title">是否匿名提交</view>
+        <switch name="switch" bindchange="switch1Change"    />
+    </view>
+     <view class="{{showOrHidden?'hide':'show'}}" ><view class='view1'     ><view class='view'   >姓  名 ☆ </view><input value='{{form_info}}' type='text' name="name"></input></view></view>
+  
+  <view class="{{showOrHidden?'hide':'show'}}" ><view class='view1'  ><view class='view'   >手机号码 ☆ </view><input type='text' name="phone"  value='{{form_info}}' ></input></view></view>
+
+<view class='xiahuaxian'></view>
+<view class="container">
+ <modal title="红树林区域划分" hidden="{{modalHidden}}" bindconfirm="modalConfirm" bindcancel="modalCandel">
+    <view>
+      <image class="image" src="../../image/file.png" mode='aspectFill'></image>
+    </view>
+    //哈哈哈
+    <view>You say that you love rain,</view>
+    <view>but you open your umbrella when it rains...</view>
+  </modal>
+  <view class='title'>请选择图片 ☆ </view>
+ <view class='imgview'>
+    <block wx:for="{{img_arr}}" wx:key="index">
+    
+      <image bindlongpress="deleteImage" data-index="{{index}}"  class="no-img sel-img" src="{{item}}" catchtap='selImagePre'></image>
+      
+    </block>
+    <image hidden='{{isMaxImagesNum}}' bindtap="upimg"   class="no-img"  src="../../image/file.png"></image>
+  </view>
+ </view> 
+  <!--<block wx:for="{{img_arr}}" wx:key="index">
+    <view class='logoinfo'>
+      <text class='xxx' bindtap='xxx' data-index='{{index}}'>x</text>
+      <image src='{{item}}'></image>
+    </view>
+  </block>
+  <image bindtap="upimg" src='../../image/5.jpg'></image>-->
+
+
+  <view class='xiahuaxian'></view>
+  <progress percent="{{percent}}" wx:if="{{in_percent}}" show-info />
+  <button formType="submit">提交审核</button>
+  <button    bindtap="Reset">重置</button>
+  </form>
+</view>
+
+
+  
+ 
+
+
+
+<button class='circle-float' bindtap='buttonTap' >地图</button>
+</view>

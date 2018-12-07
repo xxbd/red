@@ -1,0 +1,139 @@
+/**index.wxss**/
+.userinfo {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+/**控制消失**/
+.hide{
+ display: none;
+}
+.show{ 
+ display: block;
+}
+
+.userinfo-avatar {
+  width: 128rpx;
+  height: 128rpx;
+  margin: 20rpx;
+  border-radius: 50%;
+}
+
+.userinfo-nickname {
+  color: #aaa;
+}
+
+.usermotto {
+  margin-top: 200px;
+}
+/* pages/register/register3/register3.wxss */
+page{
+  font-size: 32rpx;
+}
+
+.top{
+  border-radius: 15rpx;
+  background: rgb(16, 141, 5);
+  height: 80rpx;
+  margin: 15rpx;
+  color: white;
+  padding: 20rpx;
+  text-align: center;   /** 水平居中 **/
+  
+  
+}
+.form{
+  margin: 35rpx 15rpx;
+  border:1px solid rgb(16, 141, 5);
+  border-radius: 15rpx;
+  padding: 15rpx;
+  color: rgb(1, 10, 20);
+  margin-bottom: 30rpx
+}
+.form .view{
+  display: inline-block;
+  width: 220rpx;
+  position: relative;
+  bottom: 10rpx
+}
+.view1{
+  margin-bottom: 20rpx; 
+}
+.hint{
+  position: relative;
+  left: 40rpx;
+  top: -35rpx;
+  background: white;
+  width: 230rpx;
+}
+input{
+  border:1px solid rgb(16, 141, 5);
+  height: 30rpx;
+  padding-left: 20rpx;
+  border-radius: 15rpx;
+  display: inline-block;
+}
+
+.xiahuaxian{
+  width: 100%;
+  height: 3px;
+  background: rgb(16, 141, 5);
+  margin-top: 100rpx;
+}
+button{
+  width: 320rpx;
+  height: 60rpx;
+  font-size: 25rpx;
+  line-height: 60rpx;
+  margin-top: 50rpx;
+  margin-bottom: 80rpx;
+  background: rgb(16, 141, 5);
+  color: white
+}
+.container .title {
+  font-size: 34rpx;
+  margin-left: 15rpx;
+  padding-bottom: 20rpx;
+}
+
+.container .imgview {
+  text-align: left;
+  margin-left: 15rpx;
+}
+
+.container .imgview .no-img {
+  width: 210rpx;
+  height: 218rpx;
+  margin-right: 10rpx;
+}
+.container .imgview .sel-img {
+  display: inline-block;
+}
+
+.container .centerBox {
+  text-align: center;
+}
+
+.container .submitBtn {
+  background-color: blueviolet;
+  color: white;
+  font-size: 34rpx;
+  width: 710rpx;
+  height: 66rpx;
+  line-height: 66rpx;
+  margin-top: 15rpx;
+}
+.circle-float{
+  color: #ffffff;
+  position: fixed;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  bottom: 20rpx;
+  right: 20rpx;
+  width: 120rpx;
+  height: 120rpx;
+  border-radius: 50%;
+  font-size: 28rpx;
+  background: #4EEE94;
+}
